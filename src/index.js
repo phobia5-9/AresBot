@@ -1,5 +1,12 @@
 require("dotenv").config();
 
+client.once("ready", () => {
+
+  commandHandler(client);
+
+  console.log(`${client.user.tag} is online`);
+
+});
 const {
   Client,
   GatewayIntentBits,
