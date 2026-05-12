@@ -1,7 +1,9 @@
 require("dotenv").config();
 
 client.once("ready", () => {
-
+const eventHandler = require("./handlers/eventHandler");
+  eventHandler(client);
+  
   commandHandler(client);
 
   console.log(`${client.user.tag} is online`);
